@@ -1,0 +1,122 @@
+.homecontent_container {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .homecontent_container {
+      width: 768px;
+      margin-right: auto;
+      margin-left: auto; } }
+
+body, h2 {
+  margin: 0px; }
+
+.fullHeight {
+  height: 100vh; }
+
+.siteBackground {
+  background-color: #807F69; }
+
+.lpBackground {
+  background-color: #faad14; }
+
+.lpInputBackground {
+  background-color: #fcffbf; }
+
+.lpButton {
+  background-color: #fcffbf; }
+
+.base_width {
+  width: 100%; }
+
+.fontBold {
+  font-weight: bold; }
+
+.lpFontColor {
+  color: #808080; }
+
+.colorWhite {
+  color: #ffffff; }
+
+.colorlp {
+  color: #faad14; }
+
+.bgWhite {
+  background-color: #ffffff; }
+
+.alignTextCenter {
+  text-align: center; }
+
+.alignTextLeft {
+  text-align: left; }
+
+.padTop2 {
+  padding-top: 2em; }
+
+.padBottom2 {
+  padding-bottom: 2em; }
+
+.padTop1 {
+  padding-top: 1em; }
+
+.padBottom1 {
+  padding-bottom: 1em; }
+
+.padAll1 {
+  padding: 1em; }
+  @media (min-width: 768px) {
+    .padAll1 {
+      padding: 0.6em; } }
+
+.loginContainer {
+  width: 178px;
+  margin: auto; }
+
+.txtSubHeader {
+  font-size: large; }
+  @media (min-width: 420px) {
+    .txtSubHeader {
+      font-size: x-large; } }
+
+.mainImg {
+  width: 70%; }
+  @media (min-width: 420px) {
+    .mainImg {
+      width: 40%; } }
+  @media (min-width: 420px) and (max-width: 768px) {
+    .mainImg {
+      width: 50%; } }
+
+.lpHeaderFont {
+  font-size: x-large;
+  margin-bottom: 0px; }
+  @media (min-width: 420px) {
+    .lpHeaderFont {
+      font-size: -webkit-xxx-large;
+      margin-bottom: 0px;
+      margin-top: 0.5em; } }
+
+.noMargin {
+  margin-top: 2px;
+  margin-bottom: 2px; }
+
+.scoringGrid {
+  font-size: x-large;
+  margin-bottom: 0px; }
+  @media (min-width: 420px) {
+    .scoringGrid {
+      font-size: -webkit-xxx-large;
+      margin-bottom: 0px;
+      margin-top: 0.5em; } }
+
+.evenLap {
+  float: none; }
+  @media (min-width: 420px) {
+    .evenLap {
+      float: right;
+      width: 43%; } }
+
+.oddLap {
+  float: none; }
+  @media (min-width: 420px) {
+    .oddLap {
+      float: left;
+      width: 43%; } }

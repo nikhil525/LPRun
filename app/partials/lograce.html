@@ -1,0 +1,54 @@
+
+<div class="homecontent_container bgWhite fullHeight" ng-controller="LogRaceCtrl">
+	<div style="display:flex;width:95%;margin:auto;">
+		<div style="width:25%;">
+			<img style="width:100%;max-width:125px;" alt="terlingua" src="format/img/Terlingua.gif"/>
+		 </div>
+		<div style="width:50%;" class="alignTextCenter">
+			<h3 class="colorlp fontBold lpHeaderFont"> LP RUN </h3> 			 
+		</div>
+		<div style="width:25%;">
+			<img style="width:100%;max-width:125px;" alt="turntable" src= "format/img/turntable.gif"/>
+		</div>
+	</div>
+	<div style="width:100%" class="alignTextCenter">
+		<h3 class="lpFontColor fontBold noMargin"> Race Begins in <span countdown='' date='May 23, 2017 19:00:00'></span> </h3>
+	</div>
+	<div style="display:flex;width:90%;margin:auto;" class="lpBackground colorWhite padAll1">
+		<div style="width:25%;">
+			Bib: {{runnerinfo.Bib}}
+		</div>
+		<div style="width:50%;" class="alignTextCenter">
+			 {{runnerinfo.FirstName}} {{runnerinfo.LastName}}
+		</div>
+		<div style="width:25%;text-align:right;">
+			{{runnerinfo.Gender}}, {{runnerinfo.Age}}
+		</div>
+	</div>
+	<div style="width:95%;margin:auto;">
+		<div style="display:flex;margin:auto;padding-left:1em;padding-right:1em;margin-top:5px;margin-bottom: 5px;" ng-repeat="r in records"
+			ng-class="{'oddLap': r.LapNumber%2 == 1, 'evenLap': r.LapNumber%2 == 0}" class="lpInputBackground ">
+			<div style="width:25%;">
+				Lap {{r.LapNumber}}
+			</div>
+			<div ng-show="r.LapCompleted == true" style="width:50%;" class="alignTextCenter">
+				 {{r.LapTime}}
+			</div>
+			<div ng-hide="r.LapCompleted == true" style="width:50%;" class="alignTextCenter">
+				<input name="ltime{{$index}}" type="text" ng-model="r.LapTime" value="{{r.LapTime}}" style="width:70%;"  ng-change="validatetime(r.LapTime, {{$index}})" />						
+             </div>
+			<div style="width:25%;text-align:right;">
+				<div ng-show="r.LapCompleted == true" style="width:50%;" class="alignTextCenter">
+				 	<input type="button" value="Edit" ng-click="editLap(r)" />
+				</div>
+				<div name="savelapinfo" ng-hide="r.LapCompleted == true" style="width:50%;" class="alignTextCenter">		
+					<input type="button" value="Save" ng-disabled="isDisabled({{$index}})" ng-click="saveLap(r)" />				
+				</div>
+				<div ng-hide="r.LapCompleted == true || r.LapTime == ''" style="width:50%;" class="alignTextCenter">			
+					<input type="button" value="Cancel" ng-click="cancelLapChanges(r)" />		
+				</div>
+			</div>
+		</div>
+	</div>
+ 
+</div>

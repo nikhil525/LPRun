@@ -1,0 +1,5 @@
+{
+  "name": "LPRun App",
+  "description": "This app helps you donate to worthy causes.",
+  "permissions": [ "http://lilmonkey.net"]  
+}

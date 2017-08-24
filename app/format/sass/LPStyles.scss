@@ -1,0 +1,179 @@
+$tablet-width: 980px;
+$desktop-width: 1024px;
+$tab-width: 768px;
+$mob-width: 420px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+  @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+  @content;
+  }
+}
+
+@mixin tabnav {
+  @media (min-width: #{$tab-width}) {
+  @content;
+  }
+}
+
+@mixin mobdevice {
+  @media (min-width: #{$mob-width}) {
+  @content;
+  }
+}
+
+@mixin tab {
+	@media (min-width: #{$mob-width}) and (max-width: #{$tab-width}) {
+	@content;
+	}
+}
+
+.homecontent_container {
+  @include tabnav {
+  width:768px;
+  margin-right:auto;
+  margin-left:auto;
+  }  
+  width:100%; 
+
+}
+
+body, h2 {
+	margin:0px;
+}
+
+.fullHeight {
+	height:100vh;
+}
+
+.siteBackground {
+	background-color:#807F69;
+}
+
+.lpBackground {
+	background-color: #faad14;
+}
+
+.lpInputBackground {
+	background-color: #fcffbf;
+}
+
+.lpButton {
+	background-color: #fcffbf;
+}
+
+.base_width {  
+  width:100%; 
+}
+
+.fontBold {
+	font-weight:bold;
+}
+
+.lpFontColor {
+	color: #808080;
+}
+
+.colorWhite {
+	color:#ffffff;
+}
+
+.colorlp {
+	color:#faad14;
+}
+
+.bgWhite {
+	background-color:#ffffff;
+}
+
+.alignTextCenter {
+	text-align:center;
+}
+.alignTextLeft {
+	text-align:left;
+}
+.padTop2{
+	padding-top:2em;
+}
+.padBottom2{
+	padding-bottom:2em;
+}
+.padTop1{
+	padding-top:1em;
+}
+.padBottom1{
+	padding-bottom:1em;
+}
+.padAll1{
+@include tabnav {
+  	padding:0.6em;
+  }
+	padding:1em;
+}
+
+.loginContainer {
+	width:178px;
+	margin:auto;
+}
+
+.txtSubHeader {
+  @include mobdevice {
+  font-size:x-large;
+  }  
+  font-size:large;
+}
+
+.mainImg {
+  @include mobdevice {
+  width: 40%;
+  }  
+  @include tab {
+  width: 50%;
+  } 
+  width:70%;
+}
+
+.lpHeaderFont {
+  @include mobdevice {
+  font-size:-webkit-xxx-large;
+  margin-bottom:0px;
+  margin-top:0.5em;
+  }
+  font-size:x-large;
+  margin-bottom:0px;
+}
+
+.noMargin {
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+.scoringGrid {
+  @include mobdevice {
+  font-size:-webkit-xxx-large;
+  margin-bottom:0px;
+  margin-top:0.5em;
+  }
+  font-size:x-large;
+  margin-bottom:0px;
+}
+
+.evenLap {
+	@include mobdevice {
+  float:right;
+  width:43%;
+  }
+  float:none;
+}
+.oddLap {
+	@include mobdevice {
+  float:left;
+  width:43%;
+  }
+  float:none;
+}
